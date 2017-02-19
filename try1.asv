@@ -1,0 +1,6 @@
+ chk = 1;
+   %[r c]=size(chk);
+   %for i = 1 : r
+   i = 3
+   xlsread('try.xlsx')
+  % end

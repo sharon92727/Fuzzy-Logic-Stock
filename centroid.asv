@@ -1,0 +1,6 @@
+function centroid(support,mf)
+total_area = sum(mf);
+    value = sum(mf.*support)/total_area
+    
+    if value
+end

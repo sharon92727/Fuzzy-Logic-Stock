@@ -1,0 +1,22 @@
+function stock_prediction(ip1,ip2)
+%disp('the inputs are:');
+%fprintf('\n dew point= %d,dew point spread=%d ,rate of change of dew point spread=%d ,wind speed=%d, sky coverage=%d',ip1,ip2,ip3,ip4,ip5);
+plot_input();
+plot_output();
+[fs1,fs2]=fuzzy_set(ip1,ip2);
+
+
+rules=xlsread('rules.xls');
+% disp('the rules are');
+% rules
+
+rs=3;
+m_min=zeros(3,1);
+for i=1:rs
+    a=fs1(rules(i,1));
+    b=fs2(rules(i,2));
+    
+    m_min(i)= min(a,b);
+end
+
+
